@@ -1,5 +1,7 @@
+import { FC } from 'react';
+
 import SEO from 'components/shared/seo';
 
-const Head = () => <SEO />;
+const Head: FC = () => <SEO />;
 
 export default Head;

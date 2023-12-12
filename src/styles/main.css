@@ -3,6 +3,7 @@
 @import 'tailwindcss/utilities';
 
 /* Base */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import './fonts.css';
 @import './global.css';
 @import './grid-gap.css';

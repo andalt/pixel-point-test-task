@@ -1,9 +1,14 @@
-import PropTypes from 'prop-types';
+import { FC } from 'react';
 
 const defaultTitle = 'Pixel Point Next.js Tailwind Starter';
 const defaultDescription = 'Checkout our starter';
 
-const SEO = ({ title = defaultTitle, description = defaultDescription }) => (
+interface SEOProps {
+  title?: string;
+  description?: string;
+}
+
+const SEO: FC<SEOProps> = ({ title = defaultTitle, description = defaultDescription }) => (
   <>
     <title>{title}</title>
     <meta name="description" content={description} key="desc" />
@@ -22,15 +27,5 @@ const SEO = ({ title = defaultTitle, description = defaultDescription }) => (
     <link rel="manifest" href="/favicon/manifest.webmanifest" crossOrigin="anonymous" />
   </>
 );
-
-SEO.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-};
-
-SEO.defaultProps = {
-  title: defaultTitle,
-  description: defaultDescription,
-};
 
 export default SEO;
