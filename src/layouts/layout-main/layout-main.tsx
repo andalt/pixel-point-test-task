@@ -14,7 +14,7 @@ const LayoutMain: FC<{ children: ReactNode }> = ({ children }) => {
     <>
       <SEO />
       <Header isMobileMenuOpen={isMobileMenuOpen} onBurgerClick={handleHeaderBurgerClick} />
-      <main>{children}</main>
+      <main className="pb-20">{children}</main>
       <MobileMenu isOpen={isMobileMenuOpen} />
     </>
   );

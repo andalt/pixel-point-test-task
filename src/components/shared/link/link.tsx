@@ -10,6 +10,9 @@ const baseStyles = {
   // TODO: Add sizes. Better to write down all sizes and go from higher to lower, e.g. "xl", "lg", "md", "sm", "xs"
   //       The name of the size cannot be lower than the font size that being used, e.g. "sm" size cannot have font-size "xs"
   //       Check out an example by a link above for better understanding
+  type: {
+    header: 'whitespace-nowrap py-1.5 px-1.5',
+  },
   size: {
     md: 'font-medium',
   },
@@ -23,11 +26,12 @@ const baseStyles = {
 };
 
 interface LinkProps {
-  className: string;
+  className?: string;
   size?: string;
   to: string;
   children: ReactNode;
   theme?: string;
+  type?: string;
 }
 
 const Link: FC<LinkProps> = ({
@@ -36,10 +40,12 @@ const Link: FC<LinkProps> = ({
   children,
   theme,
   size,
+  type,
   ...props
 }) => {
   const className = clsx(
     theme && baseStyles.base,
+    type && baseStyles.type[type],
     baseStyles.size[size],
     baseStyles.theme[theme],
     additionalClassName

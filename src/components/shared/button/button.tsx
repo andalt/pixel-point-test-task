@@ -19,6 +19,7 @@ const styles = {
   //       Check out an example by a link above for better understanding
   theme: {
     white: 'bg-gray-98 text-black hover:bg-gray-90 active:bg-gray-92',
+    gray: 'bg-gray-90 text-black hover:bg-gray-94 active:bg-gray-92',
   },
 };
 

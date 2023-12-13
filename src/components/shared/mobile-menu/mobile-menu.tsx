@@ -4,6 +4,7 @@ import React, { useEffect, FC } from 'react';
 import { links } from '../header/header';
 import Link from 'components/shared/link';
 import ArrowBottom from 'icons/arrow-bottom.inline.svg';
+import Button from 'components/shared/button';
 
 const ANIMATION_DURATION = 0.2;
 
@@ -47,7 +48,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isOpen }) => {
 
   return (
     <motion.div
-      className="absolute right-8 left-8 top-16 z-[-1] hidden rounded-md bg-white px-8 pt-4 pb-7 text-black shadow-[0_10px_20px_rgba(153,102,255,0.3)] lg:block md:right-4 md:left-4"
+      className="invisible absolute right-8 left-8 top-16 z-[-1] rounded-md bg-white px-8 pt-4 pb-7 text-black shadow-[0_10px_20px_rgba(153,102,255,0.3)] lg:visible md:right-4 md:left-4"
       initial="from"
       animate={controls}
       variants={variants}
@@ -59,6 +60,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isOpen }) => {
               className="flex items-center justify-center whitespace-nowrap py-1.5 px-1.5"
               to={to}
               theme="black"
+              type="header"
             >
               <span className="relative flex items-center">
                 {text}
@@ -70,7 +72,14 @@ const MobileMenu: FC<MobileMenuProps> = ({ isOpen }) => {
           </li>
         ))}
       </ul>
-      {/* TODO: Add a button if needed */}
+      <div className="flex flex-col items-stretch gap-1 pt-3 text-center">
+        <Link className="" theme="black" size="md" type="header" to="">
+          Contact Sales
+        </Link>
+        <Button theme="gray" size="sm">
+          Book a Demo
+        </Button>
+      </div>
     </motion.div>
   );
 };

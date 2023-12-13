@@ -3,7 +3,7 @@ import { Squash as Hamburger } from 'hamburger-react';
 
 import Link from 'components/shared/link';
 import ArrowBottom from 'icons/arrow-bottom.inline.svg';
-import SubMenu from 'components/shared/sub-menu';
+import Button from 'components/shared/button';
 
 interface HeaderProps {
   isMobileMenuOpen: boolean;
@@ -13,21 +13,21 @@ interface HeaderProps {
 export const links = [
   {
     text: 'Integrations',
-    to: 'integrations',
+    to: '/integrations',
   },
   {
     text: 'Core Platform',
-    to: 'core-platform',
+    to: '/core-platform',
     isSubMenu: true,
   },
   {
     text: 'Company',
-    to: 'company',
+    to: '/company',
     isSubMenu: true,
   },
   {
     text: 'Resources',
-    to: 'resources',
+    to: '/resources',
     isSubMenu: true,
   },
 ];
@@ -42,6 +42,7 @@ const Header: FC<HeaderProps> = ({ isMobileMenuOpen, onBurgerClick }) => (
               <Link
                 className="flex items-center whitespace-nowrap py-1.5 px-1.5"
                 theme="gray"
+                type="header"
                 to={to}
               >
                 {text}
@@ -51,8 +52,13 @@ const Header: FC<HeaderProps> = ({ isMobileMenuOpen, onBurgerClick }) => (
           ))}
         </ul>
       </nav>
-      <div className="absolute right-5 flex items-center gap-x-3.5 lg:hidden">
-        <SubMenu />
+      <div className="absolute right-10 flex items-center gap-x-3.5 lg:hidden">
+        <Link theme="gray" size="md" type="header" to="">
+          Contact Sales
+        </Link>
+        <Button theme="white" size="sm">
+          Book a Demo
+        </Button>
       </div>
       <div className="absolute right-5 top-2 hidden lg:block">
         <Hamburger duration={0.2} toggled={isMobileMenuOpen} size={20} toggle={onBurgerClick} />
