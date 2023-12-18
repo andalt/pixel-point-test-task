@@ -1,13 +1,13 @@
 'use client';
 
-import { FC, useState } from 'react';
-
-import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { FC, useState } from 'react';
+import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 
 import Button from 'components/shared/button';
 import TextField from 'components/shared/text-field';
+
 import Status from './status';
 
 const validationSchema = yup.object({
@@ -43,7 +43,7 @@ const FormSubscribe: FC = () => {
   const onSubmit = (data: { email: string }) => {
     setStatus('loading');
 
-    new Promise((resolve, reject) => {
+    new Promise((resolve) => {
       setTimeout(() => {
         if (data.email === 'error@gmail.com') {
           resolve(data.email);
@@ -63,7 +63,7 @@ const FormSubscribe: FC = () => {
   };
 
   return (
-    <form className="max-w-[70.5%]" onSubmit={handleSubmit(onSubmit)} noValidate>
+    <form className="max-w-[70.5%]" noValidate onSubmit={handleSubmit(onSubmit)}>
       <div className="relative">
         <TextField
           size="sm"

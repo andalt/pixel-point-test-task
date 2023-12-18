@@ -1,6 +1,5 @@
-import { FC } from 'react';
-
 import clsx from 'clsx';
+import { FC } from 'react';
 
 import Check from 'icons/check.inline.svg';
 import Close from 'icons/close.inline.svg';

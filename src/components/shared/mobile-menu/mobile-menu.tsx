@@ -1,10 +1,11 @@
 import { motion, useAnimation } from 'framer-motion';
 import React, { useEffect, FC } from 'react';
 
-import { links } from '../header/header';
+import Button from 'components/shared/button';
 import Link from 'components/shared/link';
 import ArrowBottom from 'icons/arrow-bottom.inline.svg';
-import Button from 'components/shared/button';
+
+import { links } from '../header/header';
 
 const ANIMATION_DURATION = 0.2;
 

@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
 import Benefits from 'components/pages/benefits';
-import Subscription from 'components/pages/subscription';
 import FormSubscribe from 'components/pages/formSubscribe';
+import Subscription from 'components/pages/subscription';
 
 const Home: FC = () => (
   <div className="container">

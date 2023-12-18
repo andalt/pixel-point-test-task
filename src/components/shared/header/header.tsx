@@ -1,12 +1,12 @@
 'use client';
 
-import React, { FC, useState } from 'react';
 import { Squash as Hamburger } from 'hamburger-react';
+import React, { FC, useState } from 'react';
 
-import Link from 'components/shared/link';
-import ArrowBottom from 'icons/arrow-bottom.inline.svg';
 import Button from 'components/shared/button';
+import Link from 'components/shared/link';
 import MobileMenu from 'components/shared/mobile-menu';
+import ArrowBottom from 'icons/arrow-bottom.inline.svg';
 
 export const links = [
   {
