@@ -1,0 +1,37 @@
+@layer base {
+  .subscription-gradient {
+    background: linear-gradient(
+        305deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, 0.3) 49%,
+        rgba(255, 255, 255, 0.3) 51%,
+        rgba(255, 255, 255, 0) 60%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 15%,
+        rgba(255, 255, 255, 0.2) 25%,
+        rgba(255, 255, 255, 0) 35%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    @apply blur-[5px];
+  }
+
+  .subscription-background {
+    @apply bg-[rgba(53,46,56,0.3)] shadow-[0px_40px_80px_60px_rgba(14,10,15,0.7)] backdrop-blur-[5px];
+    background-blend-mode: soft-light, normal;
+  }
+
+  .subscription-tbody tr:nth-child(2n-1) th span,
+  .subscription-tbody tr:nth-child(2n-1) td span {
+    @apply bg-white/20 mix-blend-overlay;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .subscription-tbody-td {
+    @apply relative table-cell px-3.5 py-2.5 text-left text-xs font-normal leading-3 tracking-tight;
+  }
+}

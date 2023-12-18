@@ -33,7 +33,7 @@ export const links = [
 ];
 
 const Header: FC<HeaderProps> = ({ isMobileMenuOpen, onBurgerClick }) => (
-  <header className="safe-paddings min-h-[64px]">
+  <header className="safe-paddings relative z-10 min-h-[64px]">
     <div className="container flex items-center justify-between pb-3.5 pt-3.5">
       <nav className="flex w-full justify-center lg:hidden">
         <ul className="flex gap-x-3.5 text-center">

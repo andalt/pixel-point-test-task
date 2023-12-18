@@ -1,25 +1,21 @@
 import { FC } from 'react';
 
+import SubscriptionContent from './subscription-content';
+
 const Subscription: FC = () => {
   return (
-    <div className="relative m-auto min-h-[685px] w-[464px] overflow-hidden">
-      <div className="gradient-l-subscription absolute inset-0" />
-      <div className="gradient-bl-subscription absolute inset-[-15px]" />
+    <div className="relative m-auto min-h-[685px] w-[464px]">
+      <div className="mix-blend-custom-overlay absolute top-[33px] bottom-0 left-[-126px] right-[-126px] bg-[url('/subscription/mockups.png')] bg-cover bg-center" />
+      <div className="absolute top-[-106px] bottom-[-106px] left-[-208px] right-[-208px] bg-[url('/subscription/background-blur.png')] bg-cover bg-center" />
 
-      <div className="absolute inset-0 rounded-[3px] border border-white opacity-40 mix-blend-overlay" />
-      <div className="absolute inset-0 rounded-[3px] border border-white opacity-60 mix-blend-overlay" />
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="subscription-gradient absolute inset-[-15px]" />
+        <div className="subscription-background absolute inset-0" />
 
-      <div className="absolute inset-[1px] p-7">
-        <header>
-          <img src="./subscription/logo.png" className="h-[22px] w-[104px] mix-blend-overlay" />
-          <div className="font-sans text-xs font-normal leading-normal tracking-tight text-white mix-blend-overlay">
-            Contract Start Date:
-            <br />
-            Contract End Date:
-          </div>
-        </header>
-        <section></section>
-        <footer></footer>
+        <div className="mix-blend-custom-overlay absolute inset-0 rounded-[3px] border border-white opacity-40" />
+        <div className="mix-blend-custom-overlay absolute inset-0 rounded-[3px] border border-white opacity-60" />
+
+        <SubscriptionContent />
       </div>
     </div>
   );

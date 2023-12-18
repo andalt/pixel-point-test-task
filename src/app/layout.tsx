@@ -7,7 +7,9 @@ const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
   <html lang="en">
     <head />
     <body>
-      <LayoutMain>{children}</LayoutMain>
+      <div className="relative h-screen overflow-x-hidden">
+        <LayoutMain>{children}</LayoutMain>
+      </div>
     </body>
   </html>
 );
