@@ -6,6 +6,6 @@
   }
 
   .text-field-primary input::placeholder {
-    color: #e6adec;
+    @apply text-[#e6adec];
   }
 }

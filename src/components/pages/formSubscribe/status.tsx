@@ -5,12 +5,14 @@ import clsx from 'clsx';
 import Check from 'icons/check.inline.svg';
 import Close from 'icons/close.inline.svg';
 
+import { StatusForm } from './formSubscribe';
+
 const styles = {
   base: 'absolute w-12 h-12 rounded-full top-1.5 right-1.5',
 };
 
 interface StatusProps {
-  type: 'itle' | 'loading' | 'success' | 'error';
+  type: StatusForm;
 }
 
 const Status: FC<StatusProps> = ({ type }) => {
