@@ -1,0 +1,11 @@
+@layer components {
+  .text-field-primary::before {
+    @apply mix-blend-custom-overlay absolute inset-0 z-[-1] rounded-[40px] content-[''];
+    background: linear-gradient(267deg, #fff 15%, rgba(255, 255, 255, 0.1) 80%),
+      linear-gradient(122deg, #fff -3%, rgba(255, 255, 255, 0.5) 60%), rgba(255, 255, 255, 0.1);
+  }
+
+  .text-field-primary input::placeholder {
+    color: #e6adec;
+  }
+}

@@ -4,13 +4,16 @@
 
 /* Base */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 @import './fonts.css';
 @import './global.css';
 @import './grid-gap.css';
 
 /* Components */
 @import './container.css';
+@import './form.css';
 @import './subscription.css';
+@import './benefits.css';
 
 /* Utilities */
 @import './remove-autocomplete-styles.css';

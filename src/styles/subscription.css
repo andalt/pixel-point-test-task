@@ -1,4 +1,4 @@
-@layer base {
+@layer components {
   .subscription-gradient {
     background: linear-gradient(
         305deg,

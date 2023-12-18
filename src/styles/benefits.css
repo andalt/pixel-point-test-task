@@ -1,0 +1,14 @@
+@layer components {
+  .logo {
+    @apply inline-flex font-poppins text-[136px] font-extralight lining-nums proportional-nums leading-[136px];
+    background: linear-gradient(
+      133deg,
+      #d383fc 21.78%,
+      #cb6afb 39.25%,
+      rgba(203, 106, 251, 0.2) 86.85%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

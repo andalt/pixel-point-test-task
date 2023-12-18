@@ -13,6 +13,7 @@ const styles = {
   //       Check out an example by a link above for better understanding
   size: {
     sm: 'py-2.5 px-[18px]',
+    md: 'py-4 px-5',
   },
   // TODO: Add themes. Better to name the theme using this pattern: "${color-name}-${theme-type}", e.g. "black-filled"
   //       If there is no dividing between theme types, then feel free to use just color names, e.g. "black"
@@ -20,6 +21,7 @@ const styles = {
   theme: {
     white: 'bg-gray-98 text-black hover:bg-gray-90 active:bg-gray-92',
     gray: 'bg-gray-90 text-black hover:bg-gray-94 active:bg-gray-92',
+    purple: 'bg-primary-1 text-black hover:bg-primary-2/90 active:bg-primary-2',
   },
 };
 
