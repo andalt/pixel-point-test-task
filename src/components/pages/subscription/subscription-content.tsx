@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { FC } from 'react';
 
 const terms = [
@@ -75,9 +76,12 @@ const SubscriptionContent: FC = () => {
   return (
     <div className="absolute inset-[1px] p-7 pb-[22px]">
       <header className="mb-6">
-        <img
-          src="./subscription/logo.png"
-          className="mix-blend-custom-overlay mb-3.5 h-[22px] w-[104px]"
+        <Image
+          className="mix-blend-custom-overlay mb-3.5"
+          src="/subscription/logo.png"
+          alt="Acme Corp"
+          width={105}
+          height={23}
         />
         <div className="mix-blend-custom-overlay grid grid-cols-2 grid-rows-3 gap-x-9 gap-y-1 border-y py-5 text-xs leading-normal tracking-tight">
           <div>Acme Software Co.</div>
@@ -143,9 +147,12 @@ const SubscriptionContent: FC = () => {
       </section>
       <footer className="grid grid-cols-2 grid-rows-1 items-center gap-x-9 pt-[22px]">
         <div>
-          <img
-            src="./subscription/signature.png"
-            className="mix-blend-custom-overlay h-[36px] w-[126px]"
+          <Image
+            className="mix-blend-custom-overlay"
+            src="/subscription/signature.png"
+            alt="Signature"
+            width={126}
+            height={36}
           />
         </div>
         <div>

@@ -4,7 +4,7 @@ import React, { FC, ReactNode } from 'react';
 
 const baseStyles = {
   base: 'opacity-90 transition-opacity hover:opacity-70 active:opacity-100',
-  type: {
+  variant: {
     header: 'whitespace-nowrap py-1.5 px-1.5',
   },
   size: {
@@ -19,10 +19,10 @@ const baseStyles = {
 interface LinkProps {
   className?: string;
   size?: keyof typeof baseStyles.size;
-  to: string;
+  to?: string;
   children: ReactNode;
   theme?: keyof typeof baseStyles.theme;
-  type?: keyof typeof baseStyles.type;
+  variant?: keyof typeof baseStyles.variant;
 }
 
 const Link: FC<LinkProps> = ({
@@ -31,18 +31,18 @@ const Link: FC<LinkProps> = ({
   children,
   theme,
   size,
-  type,
+  variant,
   ...props
 }) => {
   const className = clsx(
     theme && baseStyles.base,
-    type && baseStyles.type[type],
+    variant && baseStyles.variant[variant],
     size && baseStyles.size[size],
     theme && baseStyles.theme[theme],
     additionalClassName
   );
 
-  if (to.startsWith('/')) {
+  if (to && to.startsWith('/')) {
     return (
       <NextLink className={className} href={to} {...props}>
         {children}

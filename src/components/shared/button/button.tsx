@@ -1,10 +1,10 @@
 import clsx from 'clsx';
-import React, { ReactNode, FC } from 'react';
+import React, { ReactNode, FC, ButtonHTMLAttributes } from 'react';
 
 import Link from 'components/shared/link';
 
 const styles = {
-  base: 'whitespace-nowrap rounded-[40px] font-semibold leading-none transition-colors duration-300 ease-[cubic-bezier(0.4, 0, 0.2, 1)]',
+  base: 'whitespace-nowrap rounded-[40px] font-semibold leading-none transition-colors duration-300 ease-[cubic-bezier(0.4, 0, 0.2, 1)] text-center',
   disabled: 'opacity-40 pointer-events-none',
   size: {
     sm: 'py-2.5 px-[18px]',
@@ -17,7 +17,7 @@ const styles = {
   },
 };
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   size?: keyof typeof styles.size;
   to?: string;
@@ -28,7 +28,7 @@ interface ButtonProps {
 
 const Button: FC<ButtonProps> = ({
   className: additionalClassName,
-  to = '/',
+  to,
   size,
   theme,
   disabled,

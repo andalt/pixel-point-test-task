@@ -80,6 +80,7 @@ const FormSubscribe: FC = () => {
             theme="purple"
             size="md"
             aria-label="send email"
+            type="submit"
           >
             Free Trial
           </Button>

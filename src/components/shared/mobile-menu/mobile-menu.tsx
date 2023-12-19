@@ -61,7 +61,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isOpen }) => {
               className="flex items-center justify-center whitespace-nowrap py-1.5 px-1.5"
               to={to}
               theme="black"
-              type="header"
+              variant="header"
             >
               <span className="relative flex items-center">
                 {text}
@@ -74,7 +74,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isOpen }) => {
         ))}
       </ul>
       <div className="flex flex-col items-stretch gap-1 pt-3 text-center">
-        <Link className="" theme="black" size="md" type="header" to="">
+        <Link className="" theme="black" size="md" variant="header" to="/">
           Contact Sales
         </Link>
         <Button theme="gray" size="sm">

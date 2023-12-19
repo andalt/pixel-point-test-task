@@ -18,6 +18,9 @@
     }
   ],
   "rules": {
+    "react/require-default-props": "off",
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "import/extensions": "off",
     // Removes "default" from "restrictedNamedExports", original rule setup — https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/es6.js#L65
     "no-restricted-exports": ["error", { "restrictedNamedExports": ["then"] }],
     "no-unused-vars": "error",

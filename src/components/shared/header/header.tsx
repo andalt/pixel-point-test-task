@@ -45,7 +45,7 @@ const Header: FC = () => {
                 <Link
                   className="flex items-center whitespace-nowrap py-1.5 px-1.5"
                   theme="gray"
-                  type="header"
+                  variant="header"
                   to={to}
                 >
                   {text}
@@ -56,7 +56,7 @@ const Header: FC = () => {
           </ul>
         </nav>
         <div className="absolute right-10 flex items-center gap-x-3.5 lg:hidden">
-          <Link theme="gray" size="md" type="header" to="">
+          <Link theme="gray" size="md" variant="header" to="/">
             Contact Sales
           </Link>
           <Button theme="white" size="sm">

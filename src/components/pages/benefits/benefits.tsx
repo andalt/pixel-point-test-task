@@ -21,23 +21,21 @@ const data = [
   },
 ];
 
-const Benefits: FC = () => {
-  return (
-    <section className="grid grid-cols-3 justify-between gap-10">
-      {data.map((item, index) => (
-        <div key={index}>
-          <div className="logo relative mb-3.5">
-            {item.logo}
-            <span className="absolute inset-[-100px] z-[-1] bg-[url('/benefits/logo-ellipse.svg')] bg-contain bg-no-repeat" />
-          </div>
-          <h3 className="mb-8">{item.heading}</h3>
-          <div className="text-zinc-100 w-[73%] border-t border-white/10 pt-8 text-lg font-light leading-[27px] tracking-tight text-gray-94">
-            {item.content}
-          </div>
+const Benefits: FC = () => (
+  <section className="grid grid-cols-3 justify-between gap-10">
+    {data.map((item, index) => (
+      <div key={index}>
+        <div className="logo relative mb-3.5">
+          {item.logo}
+          <span className="absolute inset-[-100px] z-[-1] bg-[url('/benefits/logo-ellipse.svg')] bg-contain bg-no-repeat" />
         </div>
-      ))}
-    </section>
-  );
-};
+        <h3 className="mb-8">{item.heading}</h3>
+        <div className="text-zinc-100 w-[73%] border-t border-white/10 pt-8 text-lg font-light leading-[27px] tracking-tight text-gray-94">
+          {item.content}
+        </div>
+      </div>
+    ))}
+  </section>
+);
 
 export default Benefits;
