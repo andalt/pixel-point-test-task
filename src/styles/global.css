@@ -6,7 +6,7 @@
   }
 
   h1 {
-    @apply font-poppins text-[76px] leading-[112.5%] tracking-[-1.52px] text-gray-98;
+    @apply font-poppins text-[76px] leading-[112.5%] tracking-[-1.52px] text-gray-98 lg:text-[45px];
   }
 
   h3 {

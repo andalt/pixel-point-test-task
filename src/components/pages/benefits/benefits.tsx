@@ -22,7 +22,7 @@ const data = [
 ];
 
 const Benefits: FC = () => (
-  <section className="grid grid-cols-3 justify-between gap-10">
+  <section className="grid grid-cols-3 justify-between gap-10 lg:grid-cols-1">
     {data.map((item, index) => (
       <div key={index}>
         <div className="logo relative mb-3.5">

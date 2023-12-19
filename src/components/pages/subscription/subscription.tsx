@@ -4,8 +4,8 @@ import SubscriptionContent from './subscription-content';
 
 const Subscription: FC = () => (
   <div className="relative m-auto min-h-[685px] w-[464px]">
-    <div className="mix-blend-custom-overlay absolute top-[33px] bottom-0 left-[-126px] right-[-126px] bg-[url('/subscription/mockups.png')] bg-cover bg-center" />
-    <div className="absolute top-[-106px] bottom-[-106px] left-[-208px] right-[-208px] bg-[url('/subscription/background-blur.png')] bg-cover bg-center" />
+    <div className="mix-blend-custom-overlay absolute top-[33px] bottom-0 left-[-126px] right-[-126px] z-[-2] bg-[url('/subscription/mockups.png')] bg-cover bg-center" />
+    <div className="absolute top-[-106px] bottom-[-106px] left-[-208px] right-[-208px] z-[-2] bg-[url('/subscription/background-blur.png')] bg-cover bg-center" />
 
     <div className="absolute inset-0 overflow-hidden">
       <div className="subscription-gradient absolute inset-[-15px]" />
