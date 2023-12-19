@@ -54,7 +54,7 @@ const TextField: FC<TextFieldProps> = forwardRef(function TextFieldComponent(
         placeholder={placeholder}
         type={inputType}
         aria-label={inputType}
-        className="text-fuchsia-200 box-content block h-[39px] w-full min-w-0 border-0 bg-transparent px-0 pt-1 pb-[5px] font-sans font-light leading-tight tracking-tight opacity-80 outline-0"
+        className="text-fuchsia-200 box-content block h-[39px] w-full min-w-0 border-0 bg-transparent px-0 pt-1 pb-[5px] font-sans font-light leading-tight tracking-tight opacity-80 outline-none focus:outline-none"
         {...otherProps}
       />
     </div>
